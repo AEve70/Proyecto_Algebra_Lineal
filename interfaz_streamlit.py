@@ -52,7 +52,7 @@ alpha = st.sidebar.slider(
 )
 
 # ----------------------------------------------------------------------
-# Cálculo (mismas funciones que el script)
+# Cálculo (Reutilizacion del script de la actividad 7)
 # ----------------------------------------------------------------------
 A = G.copy() if alpha == 0 else matriz_con_rating(G, rating, alpha)
 U, s, VT = calcular_svd(A)

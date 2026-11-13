@@ -27,6 +27,7 @@ COLUMNAS_GENEROS = [
 ]
 
 # Títulos para probar el recomendador (deben existir en el CSV, igual escritos)
+# Cambiar titulos para probar coincidencias a nivel de consola
 TITULOS_PRUEBA_1 = ("Breaking Bad", "Dark")
 TITULOS_PRUEBA_2 = ("Friends", "How I Met Your Mother")
 
@@ -68,7 +69,7 @@ def revisar_matriz(G, columnas_generos):
 
 
 def calcular_svd(A):
-    """Paso 3: SVD económica. Devuelve U, s (valores singulares) y VT."""
+    """Paso 3: SVD. Devuelve U, s (valores singulares) y VT."""
     return np.linalg.svd(A, full_matrices=False)
 
 
@@ -158,7 +159,7 @@ def matriz_con_rating(G, rating, alpha):
 
 
 # ======================================================================
-# GRÁFICAS (opcionales: ayudan a ver lo que los números solo insinúan)
+# GRÁFICAS (Agregados para entender valores pero no son parte de la actividad)
 # ======================================================================
 def grafica_matriz_G(G, datos, columnas_generos, archivo="g1_matriz_G.png"):
     """Mapa de calor de G: cada fila es una serie, cada columna un género (negro = pertenece)."""
@@ -272,7 +273,7 @@ def titulo_seccion(texto):
 
 
 # ======================================================================
-# PROGRAMA PRINCIPAL: los pasos del PDF en orden
+# Metodo Main
 # ======================================================================
 def main():
     # --- Paso 1: lectura y revisión de los datos ---
